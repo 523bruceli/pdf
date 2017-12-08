@@ -56,7 +56,7 @@ public class Demo4HTMLFile2PDF
 			throws Exception
 	{
 
-		String pdfFile = "g:\\Source\\Test\\pdf\\aaa.pdf";
+		String pdfFile = "g:\\Source\\git\\pdf\\aaa.pdf";
 
 		Document document = new Document();
 		PdfWriter pdfwriter = PdfWriter.getInstance(document, new FileOutputStream(pdfFile));
@@ -69,7 +69,7 @@ public class Demo4HTMLFile2PDF
 		document.add(Chunk.NEWLINE);
 
 		// html文件
-		InputStreamReader isr = new InputStreamReader(new FileInputStream("g:\\Source\\Test\\pdf\\aaa.html"), "UTF-8");
+		InputStreamReader isr = new InputStreamReader(new FileInputStream("g:\\Source\\git\\pdf\\aaa.html"), "UTF-8");
 
 		// 方法一：默认参数转换
 		XMLWorkerHelper.getInstance().parseXHtml(pdfwriter, document, isr);
